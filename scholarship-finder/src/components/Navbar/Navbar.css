@@ -61,7 +61,7 @@ background: linear-gradient(90deg, #82d8fa 0%, #2563eb 100%);
 }
 
 .nav-links {
-  color: #1a1a1a;
+  color: #222222;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -73,7 +73,7 @@ background: linear-gradient(90deg, #82d8fa 0%, #2563eb 100%);
 }
 
 .nav-links:hover {
-  color: #4a90e2;
+  color: #c8ced5;
   transform: translateY(-2px);
 }
 

@@ -38,23 +38,23 @@ export default function ProfilePage() {
   };
 
   const handleSave = async () => {
-    const formData = new FormData();
-    formData.append("name", form.name);
-    formData.append("college", form.college);
-    formData.append("course", form.course);
-    formData.append("cpi", form.cpi);
-    formData.append("region", form.region);
-
-    if (selectedFile) {
-      formData.append("profilePicture", selectedFile);
-    }
-
+    // console.log("Saving profile with data:", form.name);
+    const formData = {
+      name: form.name,
+      college: form.college,
+      course: form.course,
+      cpi: form.cpi,
+      region: form.region,
+      profilePicture: form.profilePicture, // This will be a base64 string if set
+    };
+    // console.log("Form data to be sent:", JSON.stringify(formData));
     const response = await fetch("http://localhost:3000/user/profile/update", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("jwtoken")}`,
+        "Content-Type": "application/json",
       },
-      body: formData,
+      body: JSON.stringify(formData),
     });
 
     if (!response.ok) {

@@ -6,11 +6,14 @@ const Scholarship = require('./models/scholarship-model')
 const User = require('./models/user-model')
 const midwareFunc = require('./middleware/auth')
 const bcrypt = require('bcrypt')
-const app = express()
+const bodyParser = require('body-parser')
+const app = express();
+app.use(bodyParser.json({ limit: "100mb" }));
 app.use(express.json())
 app.use(cors({
   origin: '*'
 }))
+
 async function main() {
     await mongoose.connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/Scholarseek");
     console.log("Connected to DB")
@@ -131,7 +134,8 @@ app.get('/user/profile', midwareFunc, async (req, res) => {
     }
 })
 
-app.post('/user/profile/update', midwareFunc, async (req, res) => {
+app.post('/user/profile/update',midwareFunc, async (req, res) => {
+    // console.log("req body : " ,req.body);
     try {
         const user = await User.findOne({Username: req.user.username})
         if (!user) {
@@ -146,6 +150,6 @@ app.post('/user/profile/update', midwareFunc, async (req, res) => {
         const updatedUser = await user.save()
         res.status(201).json(updatedUser)
     } catch (error) {
-        res.status(500).json({ error: 'Failed to create scholarship' })
+        res.status(500).json({ error: 'Failed to update Profile' })
     }
 })
