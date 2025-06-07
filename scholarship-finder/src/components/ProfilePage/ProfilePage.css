@@ -1,0 +1,134 @@
+/* Main container */
+.profile-container {
+  margin-top: 100px;
+  max-width: 1000px;
+  width: 90%;
+  padding: 2rem;
+  background-color: #ffffff;
+  color: #1f2937;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.profile-container h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1e3a8a;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Box holding profile picture and table */
+.profile-box {
+  width: 100%;
+  max-width: 900px; /* limits the width */
+  margin: 0 auto 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #f0f4f8;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+  box-sizing: border-box;
+}
+
+/* Profile picture */
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile table area */
+.profile-table {
+  flex: 1;
+  min-width: 250px;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+/* Form field */
+.profile-field {
+  margin-bottom: 1.25rem;
+}
+
+.profile-field label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #475569;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.profile-field input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background-color: #e2e8f0;
+  color: #1e293b;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+}
+
+.profile-field input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #ffffff;
+}
+
+.profile-field p {
+  margin: 0;
+  padding: 0.75rem;
+  background-color: #e2e8f0;
+  border-radius: 10px;
+  color: #1e293b;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.profile-container button {
+  padding: 0.75rem 1.5rem;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0.5rem 0.5rem 0 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.profile-container button:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* Cancel button override */
+.profile-container button[style*="background-color: #64748b"] {
+  background-color: #64748b !important;
+}
+
+@media (max-width: 768px) {
+  .profile-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-table {
+    width: 100%;
+  }
+
+  .profile-pic {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,154 @@
+.home-page {
+  width: 80vw;
+  z-index: 100;
+  margin-top: 100px; /* Spacing below fixed navbar */
+  position: relative;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading1 {
+  margin: 0.5em auto;
+  font-size: 2.5rem;
+  color: #1e3a8a; /* Deep professional blue */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.urgent-notifications {
+  margin-bottom: 1rem;
+}
+
+.urgent-alert {
+  background-color: #cce5ff;
+  color: #004085;
+  padding: 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.filter-section {
+  background-color: #e7f0fd; /* Light blue background */
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  position: sticky;
+  top: 80px; /* Makes it stick below the navbar if needed */
+  z-index: 10;
+}
+
+.filter-section h2 {
+  margin-top: 0;
+  color: #1e3a8a;
+  font-size: 1.5rem;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.filter-group {
+  margin-bottom: 1rem;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #1e3a8a;
+}
+
+.filter-group select,
+.filter-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #90cdf4;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #1e3a8a;
+}
+
+.scholarships-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.scholarship-card {
+  background: #ffffff;
+  border-left: 4px solid #3b82f6; /* Blue accent stripe */
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.scholarship-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+.scholarship-card h3 {
+  margin-top: 0;
+  color: #1e3a8a;
+}
+
+.scholarship-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.amount-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  background-color: #3b82f6;
+}
+
+.description {
+  color: #2d3748;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.eligibility {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #4a5568;
+}
+
+.loading,
+.no-results {
+  text-align: center;
+  grid-column: 1 / -1;
+  padding: 2rem;
+  color: #4a5568;
+}
+
+.home-page label {
+  color: #1e3a8a;
+}
