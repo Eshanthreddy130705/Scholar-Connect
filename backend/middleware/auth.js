@@ -2,7 +2,6 @@ const jwt = require('jsonwebtoken')
 
 const midwareFunc = (req, res, next) => {
   let jwtToken
-  // console.log(req.headers)
   const auth = req.headers['authorization']
   if (auth !== undefined) {
     jwtToken = auth.split(' ')[1]
